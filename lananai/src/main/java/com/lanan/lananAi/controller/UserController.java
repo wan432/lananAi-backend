@@ -9,32 +9,20 @@ import com.lanan.lananAi.common.ResultUtils;
 import com.lanan.lananAi.constant.UserConstant;
 import com.lanan.lananAi.exception.BusinessException;
 import com.lanan.lananAi.exception.ThrowUtils;
-import com.lanan.lananAi.model.dto.user.UserAddRequest;
-import com.lanan.lananAi.model.dto.user.UserLoginRequest;
-import com.lanan.lananAi.model.dto.user.UserQueryRequest;
-import com.lanan.lananAi.model.dto.user.UserRegisterRequest;
-import com.lanan.lananAi.model.dto.user.UserUpdateMyRequest;
-import com.lanan.lananAi.model.dto.user.UserUpdateRequest;
+import com.lanan.lananAi.model.dto.user.*;
 import com.lanan.lananAi.model.entity.User;
 import com.lanan.lananAi.model.vo.LoginUserVO;
 import com.lanan.lananAi.model.vo.UserVO;
 import com.lanan.lananAi.service.UserService;
-
-import java.util.List;
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import static com.lanan.lananAi.service.impl.UserServiceImpl.SALT;
 
